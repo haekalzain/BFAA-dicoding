@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:padding="4dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_user"
+        style="@style/MainCardView"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_user"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginLeft="@dimen/margin_16"
+                android:layout_gravity="center_horizontal"
+                tools:src="" />
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="26dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="4dp"
+                android:layout_toEndOf="@+id/civ_user"
+                android:layout_toRightOf="@+id/civ_user"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_20"
+                android:textStyle="bold"
+                tools:text="Username" />
+
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_username"
+                android:layout_marginStart="26dp"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@id/civ_user"
+                android:layout_toRightOf="@id/civ_user"
+                android:ellipsize="end"
+                android:fontFamily="serif"
+                android:maxLines="3"
+                android:text="Name"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_16" />
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/civ_user"
+                android:layout_toRightOf="@+id/civ_user"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="location"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textsize_16" />
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
